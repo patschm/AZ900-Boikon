@@ -1,0 +1,15 @@
+﻿@model List<BrandModel>
+
+@{
+    ViewData["Title"] = "Brands";
+}
+
+<div class="text-start">
+    <h1 class="display-4">Welcome Brands</h1>
+    <div class="list-group">
+        @foreach(var brand in Model)
+        {
+            <a class="list-group-item list-group-item-action" asp-action="Privacy" asp-route-id="@brand.Id">@brand.Name</a>
+        }
+    </div>
+</div>
